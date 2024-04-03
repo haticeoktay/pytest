@@ -42,7 +42,7 @@ def common_assertions_for400(response,error_value,error_messsage):
     assert json_payload['errors'][0]['error_code'] == error_value
     assert json_payload['errors'][0]['error_description'] == error_messsage
     
-def api_request(client: FlaskClient, model: str, varcod: str, expected_code: str, expected_key: str, expected_value: str, error_value: int = None, error_message: str = None):
+    def api_request(client: FlaskClient, model: str, varcod: str, expected_code: str, expected_key: str, expected_value: str, error_value: int = None, error_message: str = None):
     data = {
         "model": model,
         "varcod": varcod
